@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>Настройки дневника</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic' rel='stylesheet'
+          type='text/css'>
+</head>
+<body>
+<div id="wrap">
+    <nav id="header">
+        <div class="logo">
+            <a href="../index.html" class="ongreen_link">
+                <img src="img/mask2-small.png" class="logo_icon">
+                <p>SDiary</p>
+            </a>
+        </div>
+        <div class="control">
+            <div id="notes" class="notes_button" onclick="toNotes()">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </div>
+            <div id="logout" class="logout_button" onclick="logout()">
+                <span class="glyphicon glyphicon-log-out"></span>
+            </div>
+            <div id="menu" class="menu_button"></div>
+        </div>
+    </nav>
+
+    <div id="settings_list">
+        <ul>
+            <li class="active" id="account_li" onclick="showAccountSettings()">Профиль</li>
+            <li class="inactive" id="notif_li" onclick="showNotificationSettings()">Уведомления</li>
+        </ul>
+    </div>
+
+    <div class="container_settings" align="center">
+        <h1>Настройки</h1>
+
+        <div id="account_settings" class="active">
+            <p>Настройки профиля</p>
+            <input id="username" type="text" placeholder="имя"/>
+            <input id="email" type="email" placeholder="email"/>
+            <p>Изменить пароль</p>
+            <input id="password" type="password" placeholder="новый пароль">
+            <input id="password_repeat" type="password" placeholder="повторите пароль">
+        </div>
+
+        <div id="notification_settings" class="inactive">
+            <p>Во сколько присылать уведомления?</p>
+            <select id="notification_time">
+            </select>
+            <div>
+                <input name="notification_day" type="checkbox" value="1">Пн
+                <input name="notification_day" type="checkbox" value="2">Вт
+                <input name="notification_day" type="checkbox" value="3">Ср
+                <input name="notification_day" type="checkbox" value="4">Чт
+                <input name="notification_day" type="checkbox" value="5">Пт
+                <input name="notification_day" type="checkbox" value="6">Сб
+                <input name="notification_day" type="checkbox" value="7">Вс
+            </div>
+        </div>
+
+        <div class="submit">
+            <input type="submit" value="Сохранить" onclick="saveSettingsChanges()">
+            <input type="submit" value="Отменить" onclick="dismissSettingsChanges()" id="delete">
+        </div>
+        <p class="error" name="error" id="error"></p>
+    </div>
+</div>
+<script type="text/javascript" src="js/httpRequest.js"></script>
+<script type="text/javascript" src="js/settings.js"></script>
+<script type="text/javascript" src="js/controlPanel.js"></script>
+</body>
+</html>

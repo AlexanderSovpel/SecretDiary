@@ -1,0 +1,390 @@
+body {
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+/* Header & navigation */
+#header {
+    background-color: #51ae42;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+.logo {
+    width: 200px;
+    height: 40px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.logo p {
+    margin-top: -58px;
+    margin-left: 50px;
+}
+
+.logo_icon {
+    height: 40px;
+    width: 40px;
+    vertical-align: baseline;
+}
+
+.register_login_link, .username_link {
+    text-align: right;
+    width: 170px;
+    height: 40px;
+    margin-top: 5px;
+    right: 60px;
+}
+
+.control {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notes_button,
+.add_button,
+.search_button,
+.logout_button,
+.settings_button,
+.menu_button {
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 20px;
+    color: #51ae42;
+    background-color: #ffffff;
+    margin-right: 10px;
+}
+
+#add {
+    padding-top: 4px;
+    padding-left: 2px;
+}
+
+#logout {
+    padding-left: 2px;
+    padding-top: 4.5px;
+}
+
+#search {
+    padding-top: 4px;
+}
+
+#notes {
+    font-size: 20px;
+    padding-top: 7px;
+}
+
+#settings {
+    padding-top: 5px;
+}
+
+#notes:hover,
+#add:hover,
+#search:hover,
+#settings:hover,
+#logout:hover {
+    color: #ffffff;
+    background-color: #51ae42;
+    border: solid 1px #ffffff;
+}
+
+.shown {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.search_field {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    border-radius: 20px !important;
+    border: none !important;
+}
+
+.menu_button {
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+
+/* Register & login pages */
+#container_login {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    min-height: 380px;
+}
+
+.container_register {
+    padding-top: 65px;
+    padding-bottom: 50px;
+    min-height: 380px;
+}
+
+.error, .success {
+    margin-top: 5px;
+}
+
+.error {
+    color: #B91E1E;
+}
+
+.success {
+    color: #51ae42;
+}
+
+/* Basics */
+h1 {
+    font-weight: 600;
+}
+
+.ongreen_link, .ongreen_link:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.container_login input[type="checkbox"] {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-left: -60px;
+    margin-right: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    height: 30px;
+    width: 200px;
+    padding: 2px 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #959595;
+    border-width: 1px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    box-shadow: 0 0 2px 1px #51ae42;
+    border-color: #51ae42;
+}
+
+input[type="submit"] {
+    height: 40px;
+    width: 214px;
+    border-radius: 5px;
+    background-color: #51ae42;
+    border-width: 0px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+#footer {
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0px;
+    background: #51ae42;
+    color: #fff;
+    width: 100%;
+}
+
+/* Diary page */
+.container_notes {
+    display: flex;
+    margin-top: 60px;
+    padding: 20px 40px;
+    align-items: stretch;
+}
+
+.notes_list {
+    flex-basis: 300px;
+    flex-shrink: 2;
+}
+
+#notes_header {
+    height: 50px;
+    padding-left: 20px;
+    font-size: 20px;
+    color: #959595;
+}
+
+#notes_header_separator {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 4px;
+}
+
+#notes_list {
+    overflow: auto;
+    height: 400px;
+    max-width: 300px;
+}
+
+.note {
+    max-height: 100px;
+    padding: 5px 10px 2px 10px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+}
+
+.note_link {
+    text-decoration: none;
+    color: #000;
+}
+
+#delete {
+    background-color: #e2e2e2;
+    color: #656565;
+}
+
+.note:hover {
+    color: #ffffff;
+    background-color: #51ae42;
+}
+
+.current_note {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 4;
+    background-color: #ffffff;
+    height: 100%;
+    margin-left: 20px;
+    transition: opacity 10s;
+}
+
+.no_current_note {
+    display: none;
+}
+
+.text {
+    max-height: 40px;
+    height: 100%;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title {
+    font-size: 16px;
+
+}
+
+.date {
+    font-size: 10px;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #e2e2e2;
+    width: 90%;
+    margin: 0 0 0 5%;
+    text-align: center;
+}
+
+/* Current note */
+#current_title, #current_text {
+    width: 100%;
+}
+
+#current_title {
+    margin-bottom: 0px;
+    border: none;
+    font-size: 28px;
+    color: #51ae42;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 6px;
+    height: 40px;
+}
+
+#current_title:focus {
+    box-shadow: none;
+    border: none;
+}
+
+#current_text {
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    height: 330px;
+    resize: none;
+}
+
+#save, #delete {
+    display: inline-block;
+}
+
+/* Settings */
+#settings_list {
+    padding-top: 20px;
+    width: 200px;
+}
+
+#settings_list .active {
+     color: #51ae42;
+ }
+
+#settings_list .inactive {
+    color: inherit;
+    display: block;
+}
+
+#settings_list ul {
+    list-style: none;
+}
+
+.inactive {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.submit input {
+    display: block;
+}
+
+#notification_time input[type="checkbox"] {
+    margin-right: 20px;
+}
+
+.submit {
+    margin-top: 20px;
+}
+
+/* Password restore */
+#password_restore {
+    margin-top: 120px;
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.forgot_password {
+    text-decoration: underline;
+    color: cornflowerblue;
+}

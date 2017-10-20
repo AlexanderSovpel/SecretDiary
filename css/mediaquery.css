@@ -1,0 +1,13 @@
+@media screen and (max-width: 500px) {
+    .add_button, .search_button, .logout_button {
+        display: none;
+    }
+
+    .menu_button {
+        display: block;
+    }
+
+    .control {
+        justify-content: flex-end;
+    }
+}

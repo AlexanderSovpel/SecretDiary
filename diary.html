@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/mediaquery.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic' rel='stylesheet'
+          type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body onload="loadNotes()">
+<div id="wrap">
+    <nav id="header">
+        <div class="logo">
+            <a href="../index.html" class="ongreen_link">
+                <img src="img/mask2-small.png" class="logo_icon">
+                <p>SDiary</p>
+            </a>
+        </div>
+        <div class="control">
+            <div id="add" class="add_button" onclick="addNewNote()">
+                <span class="glyphicon glyphicon-plus"></span>
+            </div>
+            <div id="search_field" class="hidden"><input type="text" class="search_field"/></div>
+            <div id="settings" class="settings_button" onclick="changeSettings()">
+                <span class="glyphicon glyphicon-cog"></span>
+            </div>
+            <div id="logout" class="logout_button" onclick="logout()">
+                <span class="glyphicon glyphicon-log-out"></span>
+            </div>
+            <div id="menu" class="menu_button">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container_notes">
+        <div class="notes_list">
+            <div id="notes_header">Заметки</div>
+            <hr id="notes_header_separator">
+            <div id="notes_list">
+            </div>
+        </div>
+        <div id="current" class="no_current_note">
+            <input type="hidden" id="current_id" value=""/>
+            <input type="text" id="current_title" placeholder="Здесь может быть ваше название" autocomplete="off"/>
+            <textarea id="current_text"></textarea>
+            <div><input type="submit" id="save" value="Сохранить" onclick="saveNote()"/>
+                <input type="submit" id="delete" value="Удалить" onclick="deleteNote()"/></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/httpRequest.js"></script>
+<script type="text/javascript" src="js/controlPanel.js"></script>
+<script type="text/javascript" src="js/loadNotes.js"></script>
+<script type="text/javascript" src="js/saveNote.js"></script>
+</body>
+</html>

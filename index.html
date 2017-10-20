@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>Вход - SDiary</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic' rel='stylesheet'
+          type='text/css'>
+</head>
+<body onload="autologin()">
+<div id="wrap">
+    <nav id="header">
+        <div class="logo">
+            <a href="index.html" class="ongreen_link">
+                <img src="img/mask2-small.png" class="logo_icon">
+
+                <p>SDiary</p>
+            </a>
+        </div>
+        <div class="register_login_link"><a href="register.html" class="ongreen_link">Зарегистрироваться</a></div>
+    </nav>
+
+    <div id="container_login" class="container_login" align="center">
+        <h1>Вход в SDiary</h1>
+
+        <div>
+            <input id="email" type="email" placeholder="email"/>
+            <input id="password" type="password" placeholder="пароль">
+            <div>
+                <input type="checkbox" id="remember">Запомнить меня
+            </div>
+            <input type="submit" value="Войти" onclick="login()">
+        </div>
+        <a class="forgot_password" onclick="showPasswordRestore()">Забыли пароль?</a>
+
+        <p class="error" name="error" id="error"></p>
+    </div>
+
+    <div id="password_restore" class="hidden" align="center">
+        <h1>Восстановление пароля</h1>
+        <div>
+            <div id="step1">
+                <p>Чтобы восстановить ваш пароль, введите свой e-mail:</p>
+                <input id="email_restore" name="restore_email" type="email" placeholder="email"/>
+                <input type="submit" name="restore1" value="Восстановить" onclick="restorePasswordStep1()">
+            </div>
+            <p class="forgot_password" onclick="showPasswordRestore()">Я вспомнил!</p>
+            <p class="error" name="error" id="restore_error"></p>
+        </div>
+    </div>
+</div>
+<div id="footer" align="center">
+    <a href="https://vk.com/alexander_sovpel" target="_blank" class="ongreen_link"><\> by Alex Sovpel</a>
+</div>
+
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/autologin.js"></script>
+<script type="text/javascript" src="js/AppController.js"></script>
+<script type="text/javascript" src="js/httpRequest.js"></script>
+<script type="text/javascript" src="js/forgotPassword.js"></script>
+</body>
+</html>
